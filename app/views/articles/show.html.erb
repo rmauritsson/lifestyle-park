@@ -1,12 +1,19 @@
 <p id="notice"><%= notice %></p>
 
 <p>
+  <strong>Category:</strong>
+  <%= @article.category.name %>
+</p>
+
+<p>
   <strong>Title:</strong>
   <%= @article.title %>
 </p>
+
 <div style = "width:400px; height: auto">
   <%= image_tag(@article.image, style: "width:100%" ) %>
 </div>
+
 <p>
   <strong>Description:</strong>
   <%= @article.description %>
