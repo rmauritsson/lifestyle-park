@@ -30,7 +30,7 @@
 .page-section {
   padding-top: 2rem;
   padding-bottom: 2rem;
-  background-image: linear-gradient(white, #e6a756), url(https://theblondeabroad.com/wp-content/uploads/2019/11/fall-about-block-texture@2x.png);
+  background-image: linear-gradient(white, rgba(230, 167, 86, 0.4)), url(https://theblondeabroad.com/wp-content/uploads/2019/11/fall-about-block-texture@2x.png);
   background-attachment: fixed;
   background-position: center;
   background-size: cover;
@@ -187,8 +187,8 @@
   color: white;
 }
 .category_section .card{
-  width: 300px;
-  height: 300px;
+  width: auto;
+  height: 18rem;
 }
 
 .card-subtitle{
@@ -226,6 +226,16 @@
   right: 0;
   opacity: 1;
   transition: .5s ease;
-  background: rgba(259, 67, 85, 0.2);
+  background: rgba(230, 167, 86, 0.4);
   overflow:hidden;
+}
+.thumbnail{
+  width: 150px;
+  height: 150px;
+}
+.post-card{
+  display: flex;
+}
+.post-card p{
+  padding: 0 10px;
 }

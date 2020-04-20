@@ -11,14 +11,14 @@
     </div>
   <% end %>
 
-  <div class="field">
+  <div class="form-group">
     <%= form.label :title %>
-    <%= form.text_field :title %>
+    <%= form.text_field :title, class: 'form-control' %>
   </div>
 
-  <div class="field">
+  <div class="form-group">
     <%= form.label :image %>
-    <%= form.file_field :image %>
+    <%= form.file_field :image, class: 'form-control-file' %>
   </div>
 
   <div class="field">
@@ -26,9 +26,9 @@
     <%= form.select :category_id, Category.all.map{ |c| [c.name, c.id]} %>
   </div>
 
-  <div class="field">
+  <div class="form-group">
     <%= form.label :description %>
-    <%= form.text_area :description %>
+    <%= form.text_area :description, class: 'form-control' %>
   </div>
 
   <div class="actions">

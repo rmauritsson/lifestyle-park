@@ -1,5 +1,16 @@
-<h1>New Article</h1>
+<section id="about">
+  <div class="container">
+    <div class="row">
+      <div class="mx-auto" style="width:80%; height: auto">
+      <div class="col-lg-8 mx-auto">
+        <h1>New Article</h1>
 
-<%= render 'form', article: @article %>
+        <%= render 'form', article: @article %>
+      </div>
 
-<%= link_to 'Back', articles_path %>
+      <div class="col-lg-8 mx-auto">
+        <%= link_to 'Back', articles_path %>
+      </div>
+    </div>
+  </div>
+</section>

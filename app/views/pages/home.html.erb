@@ -5,9 +5,9 @@
       <div class="intro-text left-0 text-center bg-faded p-5 rounded">
         <h2 class="section-heading mb-4">
           <span class="section-heading-upper"><%= @first_article.category.name %></span>
-          <span class="section-heading-lower"<%= @first_article.title %></span>
         </h2>
-        <p class="mb-3"><%= truncate(@first_article.description, length: 350) %></p>
+        <h2><%= @first_article.title %></h2>
+        <p class="mb-3"><%= truncate(@first_article.description, length: 250) %></p>
 
       </div>
     </div>
@@ -18,8 +18,8 @@
   <div class="container">
     <div class="row">
       <% @articles.each do |article|%>
-      <div class="col">
-        <div class="card mb-4 shadow-sm mt-4">
+      <div class="col-lg 3 col-md-3 col-sm-12 col-xs-12 mt-4">
+        <div class="card shadow-sm">
           <div class="overlay-effect h-100 w-100"></div>
           <%= image_tag(article.image, class: "img-fill" ) %>
           <div class="card-body">
@@ -33,6 +33,31 @@
         </div>
       </div>
       <% end %>
+    </div>
+  </div>
+</section>
+
+<section class="articles_section mt-5">
+  <div class="container">
+    <div class="row">
+      <div class="col-lg-8 col-md-10 mx-auto">
+        <% @articles.each do |article|%>
+        <div class="post-preview">
+          <div class="img-card">
+            <h3 class="post-title"><%= link_to article.title,  article_path(article.id)%></h3>
+            <h6 class="post-scategory"><%= article.category.name %></h6>
+            <p class="post-meta">Posted on September 24, 2019</p>
+          </div>
+          <div class="post-card">
+            <div class="post-img">
+              <%= image_tag(article.image, class: "thumbnail" ) %>
+            </div>
+            <p class="post-meta"><%= truncate(article.description, length: 400) %></p>
+          </div>
+        </div>
+        <hr>
+        <% end %>
+      </div>
     </div>
   </div>
 </section>
