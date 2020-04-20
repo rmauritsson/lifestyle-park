@@ -13,3 +13,26 @@
     </div>
   </div>
 </section>
+
+<section class="category_section">
+  <div class="container">
+    <div class="row">
+      <% @articles.each do |article|%>
+      <div class="col">
+        <div class="card mb-4 shadow-sm mt-4">
+          <div class="overlay-effect h-100 w-100"></div>
+          <%= image_tag(article.image, class: "img-fill" ) %>
+          <div class="card-body">
+            <div class="card-body-header">
+              <h6 class="card-subtitle mb-2"><%= article.category.name %></h6>
+            </div>
+            <div class="card-body-footer">
+              <h4 class="card-text"><%= link_to article.title,  article_path(article.id)%></h4>
+            </div>
+          </div>
+        </div>
+      </div>
+      <% end %>
+    </div>
+  </div>
+</section>
