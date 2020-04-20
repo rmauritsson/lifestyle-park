@@ -1,6 +1,10 @@
 class PagesController < ApplicationController
   def show
     if valid_page?
+      @categories = Category.all
+      @articles = Article.all
+
+      @first_article = Article.first
       render template: "pages/#{params[:page]}"
     else
       render file: "public/404.html", status: :not_found

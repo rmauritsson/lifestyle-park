@@ -1,1 +1,15 @@
-Default Page
+<section class="page-section clearfix">
+  <div class="container">
+    <div class="intro">
+      <%= image_tag(@first_article.image, class: "intro-img img-fluid mb-3 mb-lg-0 rounded" ) %>
+      <div class="intro-text left-0 text-center bg-faded p-5 rounded">
+        <h2 class="section-heading mb-4">
+          <span class="section-heading-upper"><%= @first_article.category.name %></span>
+          <span class="section-heading-lower"<%= @first_article.title %></span>
+        </h2>
+        <p class="mb-3"><%= truncate(@first_article.description, length: 350) %></p>
+
+      </div>
+    </div>
+  </div>
+</section>
